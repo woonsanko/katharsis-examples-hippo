@@ -10,3 +10,9 @@
 [katharsisexampleshippo:newsdocument] > hippostd:relaxed, hippotranslation:translated, katharsisexampleshippo:basedocument
   orderable
 
+[katharsisexampleshippo:project] > hippostd:relaxed, hippotranslation:translated, katharsisexampleshippo:basedocument
+  orderable
+
+[katharsisexampleshippo:task] > hippostd:relaxed, hippotranslation:translated, katharsisexampleshippo:basedocument
+  orderable
+
