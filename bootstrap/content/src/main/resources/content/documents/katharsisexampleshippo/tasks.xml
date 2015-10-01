@@ -42,14 +42,14 @@
       </sv:property>
       <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String">
-        <sv:value>tasks/collect-a-big-box</sv:value>
+        <sv:value>tasks/collect-a-big-box/collect-a-big-box[3]</sv:value>
         <sv:value>tasks/collect-a-big-box/collect-a-big-box[2]</sv:value>
       </sv:property>
       <sv:property sv:name="hippostd:state" sv:type="String">
         <sv:value>draft</sv:value>
       </sv:property>
       <sv:property sv:name="hippostd:stateSummary" sv:type="String">
-        <sv:value>new</sv:value>
+        <sv:value>live</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
         <sv:value>admin</sv:value>
@@ -101,13 +101,13 @@
         <sv:value>preview</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String">
-        <sv:value>tasks/collect-a-big-box</sv:value>
+        <sv:value>tasks/collect-a-big-box/collect-a-big-box[3]</sv:value>
       </sv:property>
       <sv:property sv:name="hippostd:state" sv:type="String">
         <sv:value>unpublished</sv:value>
       </sv:property>
       <sv:property sv:name="hippostd:stateSummary" sv:type="String">
-        <sv:value>new</sv:value>
+        <sv:value>live</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
         <sv:value>admin</sv:value>
@@ -120,6 +120,56 @@
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
         <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:id" sv:type="String">
+        <sv:value>d86d0efb-54d6-4fbe-a038-498e90006351</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:locale" sv:type="String">
+        <sv:value>en</sv:value>
+      </sv:property>
+      <sv:property sv:name="katharsisexampleshippo:description" sv:type="String">
+        <sv:value>&lt;p&gt;Collect a big box from supermarket or your neighbor.&lt;/p&gt;</sv:value>
+      </sv:property>
+      <sv:property sv:name="katharsisexampleshippo:name" sv:type="String">
+        <sv:value>Collect a big box</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="collect-a-big-box">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>katharsisexampleshippo:task</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mix:referenceable</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>2b9f5480-3928-4e29-8c4e-3015cbf4a309</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+        <sv:value>live</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+        <sv:value>tasks/collect-a-big-box/collect-a-big-box[2]</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:state" sv:type="String">
+        <sv:value>published</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+        <sv:value>live</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+        <sv:value>2015-09-29T17:24:20.128-04:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+        <sv:value>2015-09-29T17:24:41.314-04:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
+        <sv:value>2015-10-01T13:51:11.143-04:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippotranslation:id" sv:type="String">
         <sv:value>d86d0efb-54d6-4fbe-a038-498e90006351</sv:value>
@@ -159,13 +209,13 @@
       <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String">
         <sv:value>tasks/collect-used-batteries/collect-used-batteries[2]</sv:value>
-        <sv:value>tasks/collect-used-batteries</sv:value>
+        <sv:value>tasks/collect-used-batteries/collect-used-batteries[3]</sv:value>
       </sv:property>
       <sv:property sv:name="hippostd:state" sv:type="String">
         <sv:value>draft</sv:value>
       </sv:property>
       <sv:property sv:name="hippostd:stateSummary" sv:type="String">
-        <sv:value>new</sv:value>
+        <sv:value>live</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
         <sv:value>admin</sv:value>
@@ -217,13 +267,13 @@
         <sv:value>preview</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String">
-        <sv:value>tasks/collect-used-batteries</sv:value>
+        <sv:value>tasks/collect-used-batteries/collect-used-batteries[3]</sv:value>
       </sv:property>
       <sv:property sv:name="hippostd:state" sv:type="String">
         <sv:value>unpublished</sv:value>
       </sv:property>
       <sv:property sv:name="hippostd:stateSummary" sv:type="String">
-        <sv:value>new</sv:value>
+        <sv:value>live</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
         <sv:value>admin</sv:value>
@@ -236,6 +286,56 @@
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
         <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:id" sv:type="String">
+        <sv:value>2805c490-0197-4132-a8a2-ca5db24aef69</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:locale" sv:type="String">
+        <sv:value>en</sv:value>
+      </sv:property>
+      <sv:property sv:name="katharsisexampleshippo:description" sv:type="String">
+        <sv:value>&lt;p&gt;Collect used batteries from your home or your neighbors.&lt;/p&gt;</sv:value>
+      </sv:property>
+      <sv:property sv:name="katharsisexampleshippo:name" sv:type="String">
+        <sv:value>Collect used batteries</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="collect-used-batteries">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>katharsisexampleshippo:task</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mix:referenceable</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>9e3b14dc-15fb-4abe-ba6f-5bad67ca3e44</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+        <sv:value>live</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+        <sv:value>tasks/collect-used-batteries/collect-used-batteries[2]</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:state" sv:type="String">
+        <sv:value>published</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+        <sv:value>live</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+        <sv:value>2015-09-29T17:25:15.450-04:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+        <sv:value>2015-09-29T17:25:43.352-04:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
+        <sv:value>2015-10-01T13:51:11.015-04:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippotranslation:id" sv:type="String">
         <sv:value>2805c490-0197-4132-a8a2-ca5db24aef69</sv:value>
@@ -274,14 +374,14 @@
       </sv:property>
       <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String">
-        <sv:value>tasks/build-a-box-house</sv:value>
         <sv:value>tasks/build-a-box-house/build-a-box-house[2]</sv:value>
+        <sv:value>tasks/build-a-box-house/build-a-box-house[3]</sv:value>
       </sv:property>
       <sv:property sv:name="hippostd:state" sv:type="String">
         <sv:value>draft</sv:value>
       </sv:property>
       <sv:property sv:name="hippostd:stateSummary" sv:type="String">
-        <sv:value>new</sv:value>
+        <sv:value>live</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
         <sv:value>admin</sv:value>
@@ -333,13 +433,13 @@
         <sv:value>preview</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String">
-        <sv:value>tasks/build-a-box-house</sv:value>
+        <sv:value>tasks/build-a-box-house/build-a-box-house[3]</sv:value>
       </sv:property>
       <sv:property sv:name="hippostd:state" sv:type="String">
         <sv:value>unpublished</sv:value>
       </sv:property>
       <sv:property sv:name="hippostd:stateSummary" sv:type="String">
-        <sv:value>new</sv:value>
+        <sv:value>live</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
         <sv:value>admin</sv:value>
@@ -352,6 +452,56 @@
       </sv:property>
       <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
         <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:id" sv:type="String">
+        <sv:value>932216fc-9516-4ca7-b2fc-5e8d2bebea2e</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:locale" sv:type="String">
+        <sv:value>en</sv:value>
+      </sv:property>
+      <sv:property sv:name="katharsisexampleshippo:description" sv:type="String">
+        <sv:value>&lt;p&gt;Build a house using the box&lt;/p&gt;</sv:value>
+      </sv:property>
+      <sv:property sv:name="katharsisexampleshippo:name" sv:type="String">
+        <sv:value>Build a house using the box</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="build-a-box-house">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>katharsisexampleshippo:task</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mix:referenceable</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>ede786f3-d1ff-43ff-998f-1813065ae675</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+        <sv:value>live</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+        <sv:value>tasks/build-a-box-house/build-a-box-house[2]</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:state" sv:type="String">
+        <sv:value>published</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+        <sv:value>live</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+        <sv:value>2015-09-29T17:26:00.362-04:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+        <sv:value>2015-09-29T17:26:15.124-04:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
+        <sv:value>2015-10-01T13:51:11.432-04:00</sv:value>
       </sv:property>
       <sv:property sv:name="hippotranslation:id" sv:type="String">
         <sv:value>932216fc-9516-4ca7-b2fc-5e8d2bebea2e</sv:value>
@@ -391,13 +541,13 @@
       <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String">
         <sv:value>tasks/present-your-work-to-your-friend/present-your-work-to-your-friend[2]</sv:value>
-        <sv:value>tasks/present-your-work-to-your-friend</sv:value>
+        <sv:value>tasks/present-your-work-to-your-friend/present-your-work-to-your-friend[3]</sv:value>
       </sv:property>
       <sv:property sv:name="hippostd:state" sv:type="String">
         <sv:value>draft</sv:value>
       </sv:property>
       <sv:property sv:name="hippostd:stateSummary" sv:type="String">
-        <sv:value>new</sv:value>
+        <sv:value>live</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
         <sv:value>admin</sv:value>
@@ -449,13 +599,13 @@
         <sv:value>preview</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String">
-        <sv:value>tasks/present-your-work-to-your-friend</sv:value>
+        <sv:value>tasks/present-your-work-to-your-friend/present-your-work-to-your-friend[3]</sv:value>
       </sv:property>
       <sv:property sv:name="hippostd:state" sv:type="String">
         <sv:value>unpublished</sv:value>
       </sv:property>
       <sv:property sv:name="hippostd:stateSummary" sv:type="String">
-        <sv:value>new</sv:value>
+        <sv:value>live</sv:value>
       </sv:property>
       <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
         <sv:value>admin</sv:value>
@@ -480,6 +630,222 @@
       </sv:property>
       <sv:property sv:name="katharsisexampleshippo:name" sv:type="String">
         <sv:value>Present your work to your friend</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="present-your-work-to-your-friend">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>katharsisexampleshippo:task</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mix:referenceable</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>8b16cc3f-0afa-4d3e-a584-e3e41ab6e14d</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+        <sv:value>live</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+        <sv:value>tasks/present-your-work-to-your-friend/present-your-work-to-your-friend[2]</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:state" sv:type="String">
+        <sv:value>published</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+        <sv:value>live</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+        <sv:value>2015-09-29T17:26:35.836-04:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+        <sv:value>2015-09-29T17:26:47.420-04:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
+        <sv:value>2015-10-01T13:51:11.274-04:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:id" sv:type="String">
+        <sv:value>2d83b065-d2e3-4877-9aa7-12b3a4afe12e</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:locale" sv:type="String">
+        <sv:value>en</sv:value>
+      </sv:property>
+      <sv:property sv:name="katharsisexampleshippo:description" sv:type="String">
+        <sv:value>&lt;p&gt;Present your work to your friend&lt;/p&gt;</sv:value>
+      </sv:property>
+      <sv:property sv:name="katharsisexampleshippo:name" sv:type="String">
+        <sv:value>Present your work to your friend</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
+  <sv:node sv:name="take-used-batteries-to-recycle-center">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>hippo:handle</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+      <sv:value>mix:referenceable</sv:value>
+      <sv:value>hippo:translated</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>d52877d9-36da-45c9-96f8-8dbf7946a394</sv:value>
+    </sv:property>
+    <sv:node sv:name="take-used-batteries-to-recycle-center">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>katharsisexampleshippo:task</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mix:versionable</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>df28e139-efb9-4922-8520-700ab3ce0288</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+        <sv:value>preview</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+        <sv:value>tasks/take-used-batteries-to-recycle-center/take-used-batteries-to-recycle-center[3]</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:state" sv:type="String">
+        <sv:value>unpublished</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+        <sv:value>live</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+        <sv:value>2015-09-29T17:25:15.450-04:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+        <sv:value>2015-10-01T13:53:24.538-04:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:id" sv:type="String">
+        <sv:value>11c7fb1c-a927-4081-9d63-0eb8f5d69e1a</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:locale" sv:type="String">
+        <sv:value>en</sv:value>
+      </sv:property>
+      <sv:property sv:name="katharsisexampleshippo:description" sv:type="String">
+        <sv:value>&lt;p&gt;Take used batteries to Recycle Center&lt;/p&gt;</sv:value>
+      </sv:property>
+      <sv:property sv:name="katharsisexampleshippo:name" sv:type="String">
+        <sv:value>Take used batteries to Recycle Center</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="hippo:translation">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>hippo:translation</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:language" sv:type="String">
+        <sv:value/>
+      </sv:property>
+      <sv:property sv:name="hippo:message" sv:type="String">
+        <sv:value>Take used batteries to Recycle Center</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="take-used-batteries-to-recycle-center">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>katharsisexampleshippo:task</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mix:referenceable</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>ebd7db06-075e-49b3-8d6f-4795e20e9ebb</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
+      <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+        <sv:value>tasks/take-used-batteries-to-recycle-center/take-used-batteries-to-recycle-center</sv:value>
+        <sv:value>tasks/take-used-batteries-to-recycle-center/take-used-batteries-to-recycle-center[3]</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:state" sv:type="String">
+        <sv:value>draft</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+        <sv:value>live</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+        <sv:value>2015-09-29T17:25:15.450-04:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+        <sv:value>2015-10-01T13:52:59.467-04:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:id" sv:type="String">
+        <sv:value>11c7fb1c-a927-4081-9d63-0eb8f5d69e1a</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:locale" sv:type="String">
+        <sv:value>en</sv:value>
+      </sv:property>
+      <sv:property sv:name="katharsisexampleshippo:description" sv:type="String">
+        <sv:value>&lt;p&gt;Take used batteries to Recycle Center&lt;/p&gt;</sv:value>
+      </sv:property>
+      <sv:property sv:name="katharsisexampleshippo:name" sv:type="String">
+        <sv:value>Take used batteries to Recycle Center</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="take-used-batteries-to-recycle-center">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>katharsisexampleshippo:task</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+        <sv:value>mix:referenceable</sv:value>
+      </sv:property>
+      <sv:property sv:name="jcr:uuid" sv:type="String">
+        <sv:value>fe8999ef-8944-4c17-9b4c-468ac6458bb7</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+        <sv:value>live</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+        <sv:value>tasks/take-used-batteries-to-recycle-center/take-used-batteries-to-recycle-center</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:state" sv:type="String">
+        <sv:value>published</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+        <sv:value>live</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+        <sv:value>2015-09-29T17:25:15.450-04:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+        <sv:value>2015-10-01T13:53:24.538-04:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+        <sv:value>admin</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
+        <sv:value>2015-10-01T13:53:27.554-04:00</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:id" sv:type="String">
+        <sv:value>11c7fb1c-a927-4081-9d63-0eb8f5d69e1a</sv:value>
+      </sv:property>
+      <sv:property sv:name="hippotranslation:locale" sv:type="String">
+        <sv:value>en</sv:value>
+      </sv:property>
+      <sv:property sv:name="katharsisexampleshippo:description" sv:type="String">
+        <sv:value>&lt;p&gt;Take used batteries to Recycle Center&lt;/p&gt;</sv:value>
+      </sv:property>
+      <sv:property sv:name="katharsisexampleshippo:name" sv:type="String">
+        <sv:value>Take used batteries to Recycle Center</sv:value>
       </sv:property>
     </sv:node>
   </sv:node>

@@ -63,14 +63,14 @@
         </sv:property>
         <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+          <sv:value>projects/2015/battery-recycling/battery-recycling[3]</sv:value>
           <sv:value>projects/2015/battery-recycling/battery-recycling[2]</sv:value>
-          <sv:value>projects/2015/battery-recycling</sv:value>
         </sv:property>
         <sv:property sv:name="hippostd:state" sv:type="String">
           <sv:value>draft</sv:value>
         </sv:property>
         <sv:property sv:name="hippostd:stateSummary" sv:type="String">
-          <sv:value>new</sv:value>
+          <sv:value>live</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -79,7 +79,7 @@
           <sv:value>2015-09-29T17:21:27.840-04:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2015-09-29T17:21:29.400-04:00</sv:value>
+          <sv:value>2015-10-01T13:53:43.106-04:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -101,7 +101,23 @@
             <sv:value>hippo:mirror</sv:value>
           </sv:property>
           <sv:property sv:name="hippo:docbase" sv:type="String">
-            <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
+            <sv:value>4a42d14e-c5e7-4f46-a032-b90dfcabed9d</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="katharsisexampleshippo:task">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>d52877d9-36da-45c9-96f8-8dbf7946a394</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="katharsisexampleshippo:task">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>d81a135a-8e4a-4451-aa15-0d352978a1d9</sv:value>
           </sv:property>
         </sv:node>
       </sv:node>
@@ -122,7 +138,6 @@
         </sv:property>
         <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
           <sv:value>mix:versionable</sv:value>
-          <sv:value>mix:referenceable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>584850c6-81f9-4f75-b2ae-5e513cdd853c</sv:value>
@@ -131,13 +146,13 @@
           <sv:value>preview</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
-          <sv:value>projects/2015/battery-recycling</sv:value>
+          <sv:value>projects/2015/battery-recycling/battery-recycling[3]</sv:value>
         </sv:property>
         <sv:property sv:name="hippostd:state" sv:type="String">
           <sv:value>unpublished</sv:value>
         </sv:property>
         <sv:property sv:name="hippostd:stateSummary" sv:type="String">
-          <sv:value>new</sv:value>
+          <sv:value>live</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -146,7 +161,7 @@
           <sv:value>2015-09-29T17:21:27.840-04:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2015-09-29T17:21:53.127-04:00</sv:value>
+          <sv:value>2015-10-01T13:54:01.187-04:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -168,7 +183,97 @@
             <sv:value>hippo:mirror</sv:value>
           </sv:property>
           <sv:property sv:name="hippo:docbase" sv:type="String">
-            <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
+            <sv:value>4a42d14e-c5e7-4f46-a032-b90dfcabed9d</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="katharsisexampleshippo:task">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>d52877d9-36da-45c9-96f8-8dbf7946a394</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="katharsisexampleshippo:task">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>d81a135a-8e4a-4451-aa15-0d352978a1d9</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="battery-recycling">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>katharsisexampleshippo:project</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+          <sv:value>mix:referenceable</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>35184418-a115-4728-9fb3-3c21035ccacf</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+          <sv:value>live</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+          <sv:value>projects/2015/battery-recycling/battery-recycling[2]</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:state" sv:type="String">
+          <sv:value>published</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+          <sv:value>live</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+          <sv:value>admin</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+          <sv:value>2015-09-29T17:21:27.840-04:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+          <sv:value>2015-10-01T13:54:01.187-04:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+          <sv:value>admin</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
+          <sv:value>2015-10-01T13:54:04.139-04:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:id" sv:type="String">
+          <sv:value>a5fcc246-2408-4a0f-8ca5-7bf867231f5f</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:locale" sv:type="String">
+          <sv:value>en</sv:value>
+        </sv:property>
+        <sv:property sv:name="katharsisexampleshippo:description" sv:type="String">
+          <sv:value>&lt;p&gt;Collect batteries and recycle those.&lt;/p&gt;</sv:value>
+        </sv:property>
+        <sv:property sv:name="katharsisexampleshippo:name" sv:type="String">
+          <sv:value>Battery Recycling</sv:value>
+        </sv:property>
+        <sv:node sv:name="katharsisexampleshippo:task">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>4a42d14e-c5e7-4f46-a032-b90dfcabed9d</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="katharsisexampleshippo:task">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>d52877d9-36da-45c9-96f8-8dbf7946a394</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="katharsisexampleshippo:task">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>d81a135a-8e4a-4451-aa15-0d352978a1d9</sv:value>
           </sv:property>
         </sv:node>
       </sv:node>
@@ -196,14 +301,14 @@
         </sv:property>
         <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true"/>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+          <sv:value>projects/2015/big-box-reuse/big-box-reuse[3]</sv:value>
           <sv:value>projects/2015/big-box-reuse/big-box-reuse[2]</sv:value>
-          <sv:value>projects/2015/big-box-reuse</sv:value>
         </sv:property>
         <sv:property sv:name="hippostd:state" sv:type="String">
           <sv:value>draft</sv:value>
         </sv:property>
         <sv:property sv:name="hippostd:stateSummary" sv:type="String">
-          <sv:value>new</sv:value>
+          <sv:value>live</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -212,7 +317,7 @@
           <sv:value>2015-09-29T17:23:15.740-04:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2015-09-29T17:23:15.895-04:00</sv:value>
+          <sv:value>2015-10-01T13:54:10.718-04:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -234,7 +339,23 @@
             <sv:value>hippo:mirror</sv:value>
           </sv:property>
           <sv:property sv:name="hippo:docbase" sv:type="String">
-            <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
+            <sv:value>67a7cec7-218e-4a58-81f2-f37d3966c91b</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="katharsisexampleshippo:task">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>61481e5d-db34-4518-af6a-942e4a33c587</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="katharsisexampleshippo:task">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>d81a135a-8e4a-4451-aa15-0d352978a1d9</sv:value>
           </sv:property>
         </sv:node>
       </sv:node>
@@ -255,7 +376,6 @@
         </sv:property>
         <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
           <sv:value>mix:versionable</sv:value>
-          <sv:value>mix:referenceable</sv:value>
         </sv:property>
         <sv:property sv:name="jcr:uuid" sv:type="String">
           <sv:value>3a2beb35-d0ba-495f-9c4f-1a3849243002</sv:value>
@@ -264,13 +384,13 @@
           <sv:value>preview</sv:value>
         </sv:property>
         <sv:property sv:name="hippo:related___pathreference" sv:type="String">
-          <sv:value>projects/2015/big-box-reuse</sv:value>
+          <sv:value>projects/2015/big-box-reuse/big-box-reuse[3]</sv:value>
         </sv:property>
         <sv:property sv:name="hippostd:state" sv:type="String">
           <sv:value>unpublished</sv:value>
         </sv:property>
         <sv:property sv:name="hippostd:stateSummary" sv:type="String">
-          <sv:value>new</sv:value>
+          <sv:value>live</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -279,7 +399,7 @@
           <sv:value>2015-09-29T17:23:15.740-04:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
-          <sv:value>2015-09-29T17:23:29.698-04:00</sv:value>
+          <sv:value>2015-10-01T13:54:32.819-04:00</sv:value>
         </sv:property>
         <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
           <sv:value>admin</sv:value>
@@ -301,7 +421,97 @@
             <sv:value>hippo:mirror</sv:value>
           </sv:property>
           <sv:property sv:name="hippo:docbase" sv:type="String">
-            <sv:value>cafebabe-cafe-babe-cafe-babecafebabe</sv:value>
+            <sv:value>67a7cec7-218e-4a58-81f2-f37d3966c91b</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="katharsisexampleshippo:task">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>61481e5d-db34-4518-af6a-942e4a33c587</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="katharsisexampleshippo:task">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>d81a135a-8e4a-4451-aa15-0d352978a1d9</sv:value>
+          </sv:property>
+        </sv:node>
+      </sv:node>
+      <sv:node sv:name="big-box-reuse">
+        <sv:property sv:name="jcr:primaryType" sv:type="Name">
+          <sv:value>katharsisexampleshippo:project</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:mixinTypes" sv:type="Name" sv:multiple="true">
+          <sv:value>mix:referenceable</sv:value>
+        </sv:property>
+        <sv:property sv:name="jcr:uuid" sv:type="String">
+          <sv:value>1416b4ab-8829-41b2-89f3-c4966a22a013</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:availability" sv:type="String" sv:multiple="true">
+          <sv:value>live</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippo:related___pathreference" sv:type="String">
+          <sv:value>projects/2015/big-box-reuse/big-box-reuse[2]</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:state" sv:type="String">
+          <sv:value>published</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostd:stateSummary" sv:type="String">
+          <sv:value>live</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:createdBy" sv:type="String">
+          <sv:value>admin</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:creationDate" sv:type="Date">
+          <sv:value>2015-09-29T17:23:15.740-04:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModificationDate" sv:type="Date">
+          <sv:value>2015-10-01T13:54:32.819-04:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:lastModifiedBy" sv:type="String">
+          <sv:value>admin</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippostdpubwf:publicationDate" sv:type="Date">
+          <sv:value>2015-10-01T13:54:35.077-04:00</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:id" sv:type="String">
+          <sv:value>bc7eb419-5535-445f-91f3-48020a6f523a</sv:value>
+        </sv:property>
+        <sv:property sv:name="hippotranslation:locale" sv:type="String">
+          <sv:value>en</sv:value>
+        </sv:property>
+        <sv:property sv:name="katharsisexampleshippo:description" sv:type="String">
+          <sv:value>&lt;p&gt;Let&amp;apos;s reuse big boxes.&lt;/p&gt;</sv:value>
+        </sv:property>
+        <sv:property sv:name="katharsisexampleshippo:name" sv:type="String">
+          <sv:value>Big Box Reuse</sv:value>
+        </sv:property>
+        <sv:node sv:name="katharsisexampleshippo:task">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>67a7cec7-218e-4a58-81f2-f37d3966c91b</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="katharsisexampleshippo:task">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>61481e5d-db34-4518-af6a-942e4a33c587</sv:value>
+          </sv:property>
+        </sv:node>
+        <sv:node sv:name="katharsisexampleshippo:task">
+          <sv:property sv:name="jcr:primaryType" sv:type="Name">
+            <sv:value>hippo:mirror</sv:value>
+          </sv:property>
+          <sv:property sv:name="hippo:docbase" sv:type="String">
+            <sv:value>d81a135a-8e4a-4451-aa15-0d352978a1d9</sv:value>
           </sv:property>
         </sv:node>
       </sv:node>
