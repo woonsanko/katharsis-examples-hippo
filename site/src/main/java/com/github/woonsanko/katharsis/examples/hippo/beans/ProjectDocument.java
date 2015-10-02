@@ -1,13 +1,13 @@
 package com.github.woonsanko.katharsis.examples.hippo.beans;
 
-import java.util.Calendar;
+import java.util.List;
 
 import org.hippoecm.hst.content.beans.Node;
 import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 
-@HippoEssentialsGenerated(internalName = "katharsisexampleshippo:task")
-@Node(jcrType = "katharsisexampleshippo:task")
-public class Task extends BaseDocument {
+@HippoEssentialsGenerated(internalName = "katharsisexampleshippo:project")
+@Node(jcrType = "katharsisexampleshippo:project")
+public class ProjectDocument extends BaseDocument {
 
     @HippoEssentialsGenerated(internalName = "katharsisexampleshippo:name")
     public String getName() {
@@ -19,13 +19,8 @@ public class Task extends BaseDocument {
         return getProperty("katharsisexampleshippo:description");
     }
 
-    @HippoEssentialsGenerated(internalName = "katharsisexampleshippo:startDate")
-    public Calendar getStartDate() {
-        return getProperty("katharsisexampleshippo:startDate");
-    }
-
-    @HippoEssentialsGenerated(internalName = "katharsisexampleshippo:endDate")
-    public Calendar getEndDate() {
-        return getProperty("katharsisexampleshippo:endDate");
+    @HippoEssentialsGenerated(internalName = "katharsisexampleshippo:task")
+    public List<TaskDocument> getTaskDocuments() {
+        return getLinkedBeans("katharsisexampleshippo:task", TaskDocument.class);
     }
 }
