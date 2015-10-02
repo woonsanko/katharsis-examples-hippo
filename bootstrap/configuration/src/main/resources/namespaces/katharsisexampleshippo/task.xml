@@ -28,7 +28,7 @@
         <sv:value>hipposysedit:remodel</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>91fbc70a-4506-4323-afef-9b32f3ecb37b</sv:value>
+        <sv:value>b9a37a81-83e0-4de8-815b-cdefc4306fdb</sv:value>
       </sv:property>
       <sv:property sv:name="hipposysedit:node" sv:type="Boolean">
         <sv:value>true</sv:value>
@@ -105,7 +105,7 @@
         <sv:value>mix:referenceable</sv:value>
       </sv:property>
       <sv:property sv:name="jcr:uuid" sv:type="String">
-        <sv:value>c0b0334d-ebfe-480d-ab38-2fdf6bc4cc0c</sv:value>
+        <sv:value>199a55db-206e-47ca-a560-8eac85f03c5e</sv:value>
       </sv:property>
       <sv:property sv:name="hippo:related___pathreference" sv:type="String"/>
       <sv:property sv:name="hippostd:holder" sv:type="String">
