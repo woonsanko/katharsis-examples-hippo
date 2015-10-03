@@ -1,3 +1,19 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to You under the Apache License, Version 2.0
+ * (the "License"); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.github.woonsanko.katharsis.examples.hippo.katharsis.resource.repository;
 
 import java.util.List;
@@ -15,10 +31,20 @@ import io.katharsis.queryParams.PaginationKeys;
 import io.katharsis.queryParams.RequestParams;
 import io.katharsis.queryParams.include.Inclusion;
 
+/**
+ * Abstract JSON API Resource Repository class,
+ * containing some utility methods for child classes.
+ */
 abstract public class AbstractRepository {
 
     private static Logger log = LoggerFactory.getLogger(AbstractRepository.class);
 
+    /**
+     * Returns JSON API pagination offset parameter value as integer or {@code defaultValue} if not provided.
+     * @param requestParams {@link RequestParams} instance
+     * @param defaultValue default offset value
+     * @return JSON API pagination offset parameter value or {@code defaultValue} if not provided
+     */
     protected int getPaginationOffset(final RequestParams requestParams, final int defaultValue) {
         int value = defaultValue;
 
@@ -30,6 +56,12 @@ abstract public class AbstractRepository {
         return Math.max(0, value);
     }
 
+    /**
+     * Returns JSON API pagination limit parameter value as integer or {@code defaultValue} if not provided.
+     * @param requestParams {@link RequestParams} instance
+     * @param defaultValue default offset value
+     * @return JSON API pagination limit parameter value as integer or {@code defaultValue} if not provided
+     */
     protected int getPaginationLimit(final RequestParams requestParams, final int defaultValue) {
         int value = defaultValue;
 
@@ -41,6 +73,12 @@ abstract public class AbstractRepository {
         return Math.max(1, value);
     }
 
+    /**
+     * Returns JSON API Inclusion data as {@link Inclusion} instance after finding it by {@code path}.
+     * @param requestParams {@link RequestParams} instance
+     * @param path JSON API inclusion path
+     * @return JSON API Inclusion data as {@link Inclusion} instance after finding it by {@code path}
+     */
     protected Inclusion getInclusionByPath(final RequestParams requestParams, final String path) {
         Inclusion inclusion = null;
 
@@ -58,6 +96,11 @@ abstract public class AbstractRepository {
         return inclusion;
     }
 
+    /**
+     * Find a {@link HippoBean} instance by the given {@code identifier}, using JCR API.
+     * @param identifier identifier of a {@link HippoBean} instance
+     * @return a {@link HippoBean} instance by the given {@code identifier}, using JCR API
+     */
     protected HippoBean findHippoBeanByIdentifier(final String identifier) {
         final HstRequestContext requestContext = RequestContextProvider.get();
         final ObjectBeanManager obm = requestContext.getObjectBeanManager();
