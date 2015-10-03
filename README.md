@@ -19,19 +19,41 @@ Logs are located in target/tomcat7x/logs
 
 This project provides two JSON API resources as an example: 'projects' and 'tasks'.
 
-To retrieve all the projects, make a request like the following:
+To retrieve all the project resources, make a request like the following:
 
-    - curl http://localhost:8080/site/api/projects/
+```
+    curl -v http://localhost:8080/site/api/projects/
+```
 
-If you want to do full-text search on projects, you can pass a filter parameter named 'q' like the following:
+If you want to do full-text search on project resources, you can pass a filter parameter named 'q' like the following:
 
-    - curl http://localhost:8080/site/api/projects/?filter={"q":"box"}
+```
+    curl -v -G http://localhost:8080/site/api/projects/ --data-urlencode "filter={\"q\":\"box\"}"
+```
 
-The above example will return projects only having "box" string.
+The above example will return only project resources which has "box" string in its content.
 
-You can also retrieve all the tasks with http://localhost:8080/site/api/tasks,
-and you can retrieve one task by requesting something like http://localhost:8080/site/api/tasks/61481e5d-db34-4518-af6a-942e4a33c587.
+You can retrieve single project resource by requesting a URL like the following:
 
-The single task request URL would not include its associated project data.
+```
+    curl -v http://localhost:8080/site/api/projects/75625baf-b47c-4ec5-b3e1-58889a1a8110
+```
+
+You can also retrieve all the tasks with URL like this:
+
+```
+    curl -v http://localhost:8080/site/api/tasks
+```
+
+You can retrieve one task with URL like this:
+
+```
+    curl -v http://localhost:8080/site/api/tasks/61481e5d-db34-4518-af6a-942e4a33c587
+```
+
+The single task request URL would not include its associated project resource data by default.
 To include associated projects, you can add include parameter like the following:
-- http://localhost:8080/site/api/tasks/61481e5d-db34-4518-af6a-942e4a33c587?include=["projects"]
+
+```
+    curl -v -G http://localhost:8080/site/api/tasks/61481e5d-db34-4518-af6a-942e4a33c587 --data-urlencode "include=[\"projects\"]"
+```
