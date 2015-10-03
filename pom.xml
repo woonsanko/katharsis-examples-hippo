@@ -44,7 +44,7 @@
     <!--***START temporary override of versions*** -->
     <!-- ***END temporary override of versions*** -->
 
-    <katharsis-servlet.version>0.9.4</katharsis-servlet.version>
+    <katharsis-servlet.version>1.0.0</katharsis-servlet.version>
 
     <essentials.version>2.0.0</essentials.version>
     <jsp-api.version>2.2</jsp-api.version>
