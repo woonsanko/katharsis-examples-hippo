@@ -15,6 +15,15 @@ From the project root folder, execute:
 After your project is set up, access the CMS at http://localhost:8080/cms and the site at http://localhost:8080/site.
 Logs are located in target/tomcat7x/logs
 
+# Browse/View/Edit Example Content
+
+By default, there are some project and task resource content in Hippo CMS.
+Visit http://localhost:8080/cms/ (you can login by author/author, editor/editor or admin/admin).
+Select "Content" perspective. You will be able to see example project documents (in katharsisexampleshippo/projects/) and
+task documents (in katharsisexampleshippo/tasks/).
+
+Note: If you change something in those documents and publish them, the following JSON API requests will get new data on the fly.
+
 # How to test JSON API resources
 
 This project provides two JSON API resources as an example: 'projects' and 'tasks'.
