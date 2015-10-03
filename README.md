@@ -1,5 +1,5 @@
 # katharsis-examples-hippo
-katharsis-examples for Hippo CMS
+katharsis-examples for Hippo CMS, using [katharsis-servlet](https://github.com/katharsis-project/katharsis-servlet) in [katharsis-project](https://github.com/katharsis-project).
 
 
 # Running locally
