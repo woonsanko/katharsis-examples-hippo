@@ -62,9 +62,16 @@ You can retrieve one task with URL like this:
     curl -v http://localhost:8080/site/api/tasks/61481e5d-db34-4518-af6a-942e4a33c587
 ```
 
+The relationship can be retrieved as well (to-many relationship to projects from tasks in this example):
+
+```
+    curl -v http://localhost:8080/site/api/tasks/61481e5d-db34-4518-af6a-942e4a33c587/relationships/projects
+```
+
 The single task request URL would not include its associated project resource data by default.
 To include associated projects, you can add include parameter like the following:
 
 ```
     curl -v -G http://localhost:8080/site/api/tasks/61481e5d-db34-4518-af6a-942e4a33c587 --data-urlencode "include=[\"projects\"]"
 ```
+
