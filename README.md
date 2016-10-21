@@ -28,6 +28,8 @@ Note: If you change something in those documents and publish them, the following
 
 # How to test JSON API resources
 
+For advanced usages, please see [Katharsis Documentation](http://katharsis.io/docs).
+
 This project provides two JSON API resources as an example: 'projects' and 'tasks'.
 
 To retrieve all the project resources, make a request like the following:
@@ -36,7 +38,7 @@ To retrieve all the project resources, make a request like the following:
     curl -v http://localhost:8080/site/api/projects/
 ```
 
-If you want to do full-text search on project resources, you can pass a filter parameter named 'q' like the following:
+If you want to do full-text search on project resources, you can pass a filter parameters like the following:
 
 ```
     curl -v -G http://localhost:8080/site/api/projects/ --data-urlencode "filter\[projects\]\[$contains\]=box"
