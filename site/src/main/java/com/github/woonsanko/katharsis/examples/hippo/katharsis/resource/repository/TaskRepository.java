@@ -41,6 +41,7 @@ import com.github.woonsanko.katharsis.examples.hippo.katharsis.resource.model.Pr
 import com.github.woonsanko.katharsis.examples.hippo.katharsis.resource.model.TaskResource;
 
 import io.katharsis.queryParams.QueryParams;
+import io.katharsis.queryParams.include.Inclusion;
 import io.katharsis.queryParams.params.FilterParams;
 import io.katharsis.queryParams.params.IncludedRelationsParams;
 import io.katharsis.repository.ResourceRepository;
@@ -63,7 +64,9 @@ public class TaskRepository extends AbstractRepository implements ResourceReposi
         final Map<String, IncludedRelationsParams> typeRelationsParams = queryParams.getIncludedRelations().getParams();
         if (typeRelationsParams.containsKey("tasks")) {
             final IncludedRelationsParams tasksParams = typeRelationsParams.get("tasks");
-            if (tasksParams.getParams().contains("projects")) {
+            final Set<Inclusion> inclusions = tasksParams.getParams();
+            if (CollectionUtils.isNotEmpty(inclusions)
+                    && StringUtils.equals("projects", inclusions.iterator().next().getPath())) {
                 includeProjectResources(taskDoc, taskRes);
             }
         }
