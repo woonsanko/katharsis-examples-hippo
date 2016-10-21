@@ -18,6 +18,8 @@ package com.github.woonsanko.katharsis.examples.hippo.katharsis.resource.model;
 
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 
+import com.github.woonsanko.katharsis.examples.hippo.beans.Project;
+
 import io.katharsis.resource.annotations.JsonApiId;
 import io.katharsis.resource.annotations.JsonApiResource;
 
@@ -33,18 +35,17 @@ public class ProjectResource extends AbstractResource {
 
     @Override
     public <T extends AbstractResource> T represent(HippoBean hippoBean) {
-        return null;
-//        if (!(hippoBean instanceof ProjectDocument)) {
-//            throw new IllegalArgumentException("Not a project document: " + hippoBean);
-//        }
-//
-//        ProjectDocument projectDoc = (ProjectDocument) hippoBean;
-//
-//        setId(projectDoc.getCanonicalHandleUUID());
-//        setName(projectDoc.getName());
-//        setDescription(projectDoc.getDescription());
-//
-//        return (T) this;
+        if (!(hippoBean instanceof Project)) {
+            throw new IllegalArgumentException("Not a project document: " + hippoBean);
+        }
+
+        Project projectDoc = (Project) hippoBean;
+
+        setId(projectDoc.getCanonicalHandleUUID());
+        setName(projectDoc.getName());
+        setDescription(projectDoc.getDescription());
+
+        return (T) this;
     }
 
     public String getId() {

@@ -31,6 +31,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
+import com.github.woonsanko.katharsis.examples.hippo.beans.Project;
 import com.github.woonsanko.katharsis.examples.hippo.katharsis.resource.exception.ResourceNotFoundException;
 import com.github.woonsanko.katharsis.examples.hippo.katharsis.resource.model.ProjectResource;
 
@@ -44,15 +45,14 @@ public class ProjectRepository extends AbstractRepository implements ResourceRep
 
     @Override
     public ProjectResource findOne(String id, QueryParams requestParams) {
-//        ProjectDocument projectDoc = (ProjectDocument) findHippoBeanByIdentifier(id);
-//
-//        if (projectDoc == null) {
-//            throw new ResourceNotFoundException("Project not found by '" + id + "'.");
-//        }
-//
-//        ProjectResource projectRes = new ProjectResource().represent(projectDoc);
-//        return projectRes;
-        return null;
+        Project projectDoc = (Project) findHippoBeanByIdentifier(id);
+
+        if (projectDoc == null) {
+            throw new ResourceNotFoundException("Project not found by '" + id + "'.");
+        }
+
+        ProjectResource projectRes = new ProjectResource().represent(projectDoc);
+        return projectRes;
     }
 
     @Override
@@ -60,36 +60,36 @@ public class ProjectRepository extends AbstractRepository implements ResourceRep
         List<ProjectResource> projectResList = new LinkedList<>();
 
         try {
-//            final HstRequestContext requestContext = RequestContextProvider.get();
-//            final HippoBean scope = requestContext.getSiteContentBaseBean();
-//            final HstQuery hstQuery = requestContext.getQueryManager().createQuery(scope, ProjectDocument.class, true);
-//
-//            String queryTerm = null;
-//
-//            if (requestParams.getFilters() != null) {
-//                // FIXME
-//                //queryTerm = StringUtils.trim(requestParams.getFilters().get("q").asText());
-//            }
-//
-//            if (StringUtils.isNotEmpty(queryTerm)) {
-//                final Filter filter = hstQuery.createFilter();
-//                filter.addContains(".", queryTerm);
-//                hstQuery.setFilter(filter);
-//            }
-//
-//            hstQuery.setOffset(getPaginationOffset(requestParams, 0));
-//            hstQuery.setLimit(this.getPaginationLimit(requestParams, 200));
-//
-//            final HstQueryResult result = hstQuery.execute();
-//
-//            ProjectDocument projectDoc;
-//            ProjectResource projectRes;
-//
-//            for (HippoBeanIterator it = result.getHippoBeans(); it.hasNext(); ) {
-//                projectDoc = (ProjectDocument) it.nextHippoBean();
-//                projectRes = new ProjectResource().represent(projectDoc);
-//                projectResList.add(projectRes);
-//            }
+            final HstRequestContext requestContext = RequestContextProvider.get();
+            final HippoBean scope = requestContext.getSiteContentBaseBean();
+            final HstQuery hstQuery = requestContext.getQueryManager().createQuery(scope, Project.class, true);
+
+            String queryTerm = null;
+
+            if (requestParams.getFilters() != null) {
+                // FIXME
+                //queryTerm = StringUtils.trim(requestParams.getFilters().get("q").asText());
+            }
+
+            if (StringUtils.isNotEmpty(queryTerm)) {
+                final Filter filter = hstQuery.createFilter();
+                filter.addContains(".", queryTerm);
+                hstQuery.setFilter(filter);
+            }
+
+            hstQuery.setOffset(getPaginationOffset(requestParams, 0));
+            hstQuery.setLimit(this.getPaginationLimit(requestParams, 200));
+
+            final HstQueryResult result = hstQuery.execute();
+
+            Project projectDoc;
+            ProjectResource projectRes;
+
+            for (HippoBeanIterator it = result.getHippoBeans(); it.hasNext(); ) {
+                projectDoc = (Project) it.nextHippoBean();
+                projectRes = new ProjectResource().represent(projectDoc);
+                projectResList.add(projectRes);
+            }
         } catch (Exception e) {
             log.error("Failed to query projects.", e);
         }

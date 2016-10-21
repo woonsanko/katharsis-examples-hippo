@@ -1,0 +1,126 @@
+{
+  "hippo:templates":   {
+    "en":     {
+      "new-news-document": "new news item",
+      "new-resource-bundle": "new resource bundle",
+      "new-news-folder": "new news item folder",
+      "new-untranslated-folder": "new untranslated folder",
+      "new-events-folder": "new events folder",
+      "new-events-document": "new event"
+    },
+    "nl":     {
+      "new-news-document": "nieuw nieuwsbericht",
+      "new-resource-bundle": "nieuwe resource bundle",
+      "new-news-folder": "nieuwe nieuwsmap",
+      "new-untranslated-folder": "nieuwe onvertaalde map",
+      "new-events-folder": "nieuwe evenementenmap",
+      "new-events-document": "nieuw evenement"
+    },
+    "de":     {
+      "new-news-document": "Neue News",
+      "new-resource-bundle": "Neues Resource-Bundle",
+      "new-news-folder": "Neuer News-Ordner",
+      "new-untranslated-folder": "Neuer nicht übersetzter Ordner",
+      "new-events-folder": "Neuer Events-Ordner",
+      "new-events-document": "Neues Event"
+    },
+    "fr":     {
+      "new-news-document": "nouveau message d'info",
+      "new-resource-bundle": "nouveau resource bundle",
+      "new-news-folder": "nouveau dossier messages d'info",
+      "new-untranslated-folder": "nouveau dossier non traduit",
+      "new-events-folder": "nouveau dossier événements",
+      "new-events-document": "nouvel événement"
+    }
+  },
+  "hippo:types":   {
+    "katharsisexampleshippo:eventsdocument":     {
+      "en":       {
+        "katharsisexampleshippo:introduction": "Introduction",
+        "katharsisexampleshippo:location": "Location",
+        "jcr:name": "Event",
+        "katharsisexampleshippo:content": "Content",
+        "katharsisexampleshippo:enddate": "End date",
+        "katharsisexampleshippo:date": "Start date",
+        "katharsisexampleshippo:image": "Image",
+        "katharsisexampleshippo:title": "Title"
+      },
+      "nl":       {
+        "katharsisexampleshippo:introduction": "Introductie",
+        "katharsisexampleshippo:location": "Locatie",
+        "jcr:name": "Evenement",
+        "katharsisexampleshippo:content": "Inhoud",
+        "katharsisexampleshippo:enddate": "Einddatum",
+        "katharsisexampleshippo:date": "Startdatum",
+        "katharsisexampleshippo:image": "Afbeelding",
+        "katharsisexampleshippo:title": "Titel"
+      },
+      "fr":       {
+        "katharsisexampleshippo:introduction": "Introduction",
+        "katharsisexampleshippo:location": "Lieu",
+        "jcr:name": "Événement",
+        "katharsisexampleshippo:content": "Contenu",
+        "katharsisexampleshippo:enddate": "Date de fin",
+        "katharsisexampleshippo:date": "Date de début",
+        "katharsisexampleshippo:image": "Image",
+        "katharsisexampleshippo:title": "Titre"
+      },
+      "de":       {
+        "katharsisexampleshippo:introduction": "Einführung",
+        "katharsisexampleshippo:location": "Standort",
+        "jcr:name": "Event",
+        "katharsisexampleshippo:content": "Inhalt",
+        "katharsisexampleshippo:enddate": "Enddatum",
+        "katharsisexampleshippo:date": "Startdatum",
+        "katharsisexampleshippo:image": "Abbildung",
+        "katharsisexampleshippo:title": "Titel"
+      }
+    },
+    "katharsisexampleshippo:newsdocument":     {
+      "en":       {
+        "katharsisexampleshippo:introduction": "Introduction",
+        "katharsisexampleshippo:location": "Location",
+        "jcr:name": "News Item",
+        "katharsisexampleshippo:content": "Content",
+        "katharsisexampleshippo:author": "Author",
+        "katharsisexampleshippo:date": "Date",
+        "katharsisexampleshippo:image": "Image",
+        "katharsisexampleshippo:title": "Title",
+        "katharsisexampleshippo:source": "Source"
+      },
+      "nl":       {
+        "katharsisexampleshippo:introduction": "Introductie",
+        "katharsisexampleshippo:location": "Locatie",
+        "jcr:name": "Nieuwsbericht",
+        "katharsisexampleshippo:content": "Inhoud",
+        "katharsisexampleshippo:author": "Auteur",
+        "katharsisexampleshippo:date": "Datum",
+        "katharsisexampleshippo:image": "Afbeelding",
+        "katharsisexampleshippo:title": "Titel",
+        "katharsisexampleshippo:source": "Bron"
+      },
+      "de":       {
+        "katharsisexampleshippo:introduction": "Einführung",
+        "katharsisexampleshippo:location": "Standort",
+        "jcr:name": "News",
+        "katharsisexampleshippo:content": "Inhalt",
+        "katharsisexampleshippo:author": "Verfasser",
+        "katharsisexampleshippo:date": "Datum",
+        "katharsisexampleshippo:image": "Abbildung",
+        "katharsisexampleshippo:title": "Titel",
+        "katharsisexampleshippo:source": "Quelle"
+      },
+      "fr":       {
+        "katharsisexampleshippo:introduction": "Introduction",
+        "katharsisexampleshippo:location": "Lieu",
+        "jcr:name": "Message d'info",
+        "katharsisexampleshippo:content": "Contenu",
+        "katharsisexampleshippo:author": "Auteur",
+        "katharsisexampleshippo:date": "Date",
+        "katharsisexampleshippo:image": "Image",
+        "katharsisexampleshippo:title": "Titre",
+        "katharsisexampleshippo:source": "Source"
+      }
+    }
+  }
+}

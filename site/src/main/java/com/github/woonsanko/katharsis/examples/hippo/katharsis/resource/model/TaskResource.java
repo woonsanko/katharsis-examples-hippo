@@ -20,6 +20,8 @@ import java.util.List;
 
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 
+import com.github.woonsanko.katharsis.examples.hippo.beans.Task;
+
 import io.katharsis.resource.annotations.JsonApiId;
 import io.katharsis.resource.annotations.JsonApiIncludeByDefault;
 import io.katharsis.resource.annotations.JsonApiResource;
@@ -41,15 +43,15 @@ public class TaskResource extends AbstractResource {
 
     @Override
     public <T extends AbstractResource> T represent(HippoBean hippoBean) {
-//        if (!(hippoBean instanceof TaskDocument)) {
-//            throw new IllegalArgumentException("Not a task document: " + hippoBean);
-//        }
-//
-//        TaskDocument taskDoc = (TaskDocument) hippoBean;
-//
-//        setId(taskDoc.getCanonicalHandleUUID());
-//        setName(taskDoc.getName());
-//        setDescription(taskDoc.getDescription());
+        if (!(hippoBean instanceof Task)) {
+            throw new IllegalArgumentException("Not a task document: " + hippoBean);
+        }
+
+        Task taskDoc = (Task) hippoBean;
+
+        setId(taskDoc.getCanonicalHandleUUID());
+        setName(taskDoc.getName());
+        setDescription(taskDoc.getDescription());
 
         return (T) this;
     }

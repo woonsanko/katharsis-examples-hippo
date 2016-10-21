@@ -7,6 +7,12 @@
 [katharsisexampleshippo:basedocument] > hippo:document, hippostd:publishableSummary, hippostdpubwf:document
   orderable
 
+[katharsisexampleshippo:eventsdocument] > hippostd:relaxed, hippotranslation:translated, katharsisexampleshippo:basedocument
+  orderable
+
+[katharsisexampleshippo:newsdocument] > hippostd:relaxed, hippotranslation:translated, katharsisexampleshippo:basedocument
+  orderable
+
 [katharsisexampleshippo:project] > hippostd:relaxed, hippotranslation:translated, katharsisexampleshippo:basedocument
   orderable
 
