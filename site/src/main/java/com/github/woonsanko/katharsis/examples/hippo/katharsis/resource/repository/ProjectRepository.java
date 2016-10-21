@@ -18,8 +18,10 @@ package com.github.woonsanko.katharsis.examples.hippo.katharsis.resource.reposit
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
+import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang.StringUtils;
 import org.hippoecm.hst.container.RequestContextProvider;
 import org.hippoecm.hst.content.beans.query.HstQuery;
@@ -46,7 +48,7 @@ public class ProjectRepository extends AbstractRepository implements ResourceRep
     private static Logger log = LoggerFactory.getLogger(ProjectRepository.class);
 
     @Override
-    public ProjectResource findOne(String id, QueryParams requestParams) {
+    public ProjectResource findOne(String id, QueryParams queryParams) {
         Project projectDoc = (Project) findHippoBeanByIdentifier(id);
 
         if (projectDoc == null) {
@@ -68,10 +70,11 @@ public class ProjectRepository extends AbstractRepository implements ResourceRep
 
             String queryTerm = null;
 
-            final FilterParams projectFilterParams = queryParams.getFilters().getParams().get("project");
-            if (projectFilterParams != null) {
-                final Set<String> filterValues = projectFilterParams.getParams().get("q");
-                if (filterValues != null && !filterValues.isEmpty()) {
+            final Map<String, FilterParams> typeFilterParams = queryParams.getFilters().getParams();
+            if (typeFilterParams.containsKey("projects")) {
+                final FilterParams projectsParams = typeFilterParams.get("projects");
+                final Set<String> filterValues = projectsParams.getParams().get("$contains");
+                if (CollectionUtils.isNotEmpty(filterValues)) {
                     queryTerm = StringUtils.trim(filterValues.iterator().next());
                 }
             }
@@ -103,8 +106,8 @@ public class ProjectRepository extends AbstractRepository implements ResourceRep
     }
 
     @Override
-    public Iterable<ProjectResource> findAll(Iterable<String> ids, QueryParams requestParams) {
-        return findAll(requestParams);
+    public Iterable<ProjectResource> findAll(Iterable<String> ids, QueryParams queryParams) {
+        return findAll(queryParams);
     }
 
     @Override

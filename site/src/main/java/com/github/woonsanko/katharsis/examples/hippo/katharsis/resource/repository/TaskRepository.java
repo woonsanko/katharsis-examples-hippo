@@ -18,6 +18,7 @@ package com.github.woonsanko.katharsis.examples.hippo.katharsis.resource.reposit
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import org.apache.commons.collections.CollectionUtils;
@@ -41,6 +42,7 @@ import com.github.woonsanko.katharsis.examples.hippo.katharsis.resource.model.Ta
 
 import io.katharsis.queryParams.QueryParams;
 import io.katharsis.queryParams.params.FilterParams;
+import io.katharsis.queryParams.params.IncludedRelationsParams;
 import io.katharsis.repository.ResourceRepository;
 
 @Component
@@ -58,8 +60,12 @@ public class TaskRepository extends AbstractRepository implements ResourceReposi
 
         TaskResource taskRes = new TaskResource().represent(taskDoc);
 
-        if (queryParams.getIncludedRelations().getParams().containsKey("projects")) {
-            includeProjectResources(taskDoc, taskRes);
+        final Map<String, IncludedRelationsParams> typeRelationsParams = queryParams.getIncludedRelations().getParams();
+        if (typeRelationsParams.containsKey("tasks")) {
+            final IncludedRelationsParams tasksParams = typeRelationsParams.get("tasks");
+            if (tasksParams.getParams().contains("projects")) {
+                includeProjectResources(taskDoc, taskRes);
+            }
         }
 
         return taskRes;
@@ -76,10 +82,11 @@ public class TaskRepository extends AbstractRepository implements ResourceReposi
 
             String queryTerm = null;
 
-            final FilterParams projectFilterParams = queryParams.getFilters().getParams().get("task");
-            if (projectFilterParams != null) {
-                final Set<String> filterValues = projectFilterParams.getParams().get("q");
-                if (filterValues != null && !filterValues.isEmpty()) {
+            final Map<String, FilterParams> typeFilterParams = queryParams.getFilters().getParams();
+            if (typeFilterParams.containsKey("tasks")) {
+                final FilterParams tasksParams = typeFilterParams.get("tasks");
+                final Set<String> filterValues = tasksParams.getParams().get("$contains");
+                if (CollectionUtils.isNotEmpty(filterValues)) {
                     queryTerm = StringUtils.trim(filterValues.iterator().next());
                 }
             }
@@ -111,8 +118,8 @@ public class TaskRepository extends AbstractRepository implements ResourceReposi
     }
 
     @Override
-    public Iterable<TaskResource> findAll(Iterable<String> ids, QueryParams requestParams) {
-        return findAll(requestParams);
+    public Iterable<TaskResource> findAll(Iterable<String> ids, QueryParams queryParams) {
+        return findAll(queryParams);
     }
 
     @Override

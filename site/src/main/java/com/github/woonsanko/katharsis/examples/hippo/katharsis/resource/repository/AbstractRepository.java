@@ -37,16 +37,16 @@ abstract public class AbstractRepository {
 
     /**
      * Returns JSON API pagination offset parameter value as integer or {@code defaultValue} if not provided.
-     * @param requestParams {@link RequestParams} instance
+     * @param queryParams {@link QueryParams} instance
      * @param defaultValue default offset value
      * @return JSON API pagination offset parameter value or {@code defaultValue} if not provided
      */
-    protected int getPaginationOffset(final QueryParams requestParams, final int defaultValue) {
+    protected int getPaginationOffset(final QueryParams queryParams, final int defaultValue) {
         int value = defaultValue;
 
-        if (requestParams != null && requestParams.getPagination() != null
-                && requestParams.getPagination().containsKey(RestrictedPaginationKeys.offset)) {
-            value = requestParams.getPagination().get(RestrictedPaginationKeys.offset);
+        if (queryParams != null && queryParams.getPagination() != null
+                && queryParams.getPagination().containsKey(RestrictedPaginationKeys.offset)) {
+            value = queryParams.getPagination().get(RestrictedPaginationKeys.offset);
         }
 
         return Math.max(0, value);
@@ -54,16 +54,16 @@ abstract public class AbstractRepository {
 
     /**
      * Returns JSON API pagination limit parameter value as integer or {@code defaultValue} if not provided.
-     * @param requestParams {@link RequestParams} instance
+     * @param queryParams {@link QueryParams} instance
      * @param defaultValue default offset value
      * @return JSON API pagination limit parameter value as integer or {@code defaultValue} if not provided
      */
-    protected int getPaginationLimit(final QueryParams requestParams, final int defaultValue) {
+    protected int getPaginationLimit(final QueryParams queryParams, final int defaultValue) {
         int value = defaultValue;
 
-        if (requestParams != null && requestParams.getPagination() != null
-                && requestParams.getPagination().containsKey(RestrictedPaginationKeys.limit)) {
-            value = requestParams.getPagination().get(RestrictedPaginationKeys.limit);
+        if (queryParams != null && queryParams.getPagination() != null
+                && queryParams.getPagination().containsKey(RestrictedPaginationKeys.limit)) {
+            value = queryParams.getPagination().get(RestrictedPaginationKeys.limit);
         }
 
         return Math.max(1, value);

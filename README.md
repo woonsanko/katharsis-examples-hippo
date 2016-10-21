@@ -39,7 +39,7 @@ To retrieve all the project resources, make a request like the following:
 If you want to do full-text search on project resources, you can pass a filter parameter named 'q' like the following:
 
 ```
-    curl -v -G http://localhost:8080/site/api/projects/ --data-urlencode "filter={\"q\":\"box\"}"
+    curl -v -G http://localhost:8080/site/api/projects/ --data-urlencode "filter\[projects\]\[$contains\]=box"
 ```
 
 The above example will return only project resources which has "box" string in its content.
@@ -72,6 +72,6 @@ The single task request URL would not include its associated project resource da
 To include associated projects, you can add include parameter like the following:
 
 ```
-    curl -v -G http://localhost:8080/site/api/tasks/61481e5d-db34-4518-af6a-942e4a33c587 --data-urlencode "include=[\"projects\"]"
+    curl -v -G http://localhost:8080/site/api/tasks/61481e5d-db34-4518-af6a-942e4a33c587 --data-urlencode "include\[tasks\]=projects"
 ```
 

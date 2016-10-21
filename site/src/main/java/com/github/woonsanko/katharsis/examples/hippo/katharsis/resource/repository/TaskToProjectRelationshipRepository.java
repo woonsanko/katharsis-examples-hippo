@@ -37,7 +37,7 @@ public class TaskToProjectRelationshipRepository extends AbstractRepository
         implements RelationshipRepository<TaskResource, String, ProjectResource, String> {
 
     @Override
-    public Iterable<ProjectResource> findManyTargets(String sourceId, String fieldName, QueryParams requestParams) {
+    public Iterable<ProjectResource> findManyTargets(String sourceId, String fieldName, QueryParams queryParams) {
         List<ProjectResource> projectResList = null;
 
         Task taskDoc = (Task) findHippoBeanByIdentifier(sourceId);
@@ -66,7 +66,7 @@ public class TaskToProjectRelationshipRepository extends AbstractRepository
     }
 
     @Override
-    public ProjectResource findOneTarget(String sourceId, String fieldName, QueryParams requestParams) {
+    public ProjectResource findOneTarget(String sourceId, String fieldName, QueryParams queryParams) {
         return null;
     }
 
