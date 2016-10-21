@@ -18,6 +18,7 @@ package com.github.woonsanko.katharsis.examples.hippo.katharsis.resource.reposit
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 
 import org.apache.commons.lang.StringUtils;
 import org.hippoecm.hst.container.RequestContextProvider;
@@ -36,6 +37,7 @@ import com.github.woonsanko.katharsis.examples.hippo.katharsis.resource.exceptio
 import com.github.woonsanko.katharsis.examples.hippo.katharsis.resource.model.ProjectResource;
 
 import io.katharsis.queryParams.QueryParams;
+import io.katharsis.queryParams.params.FilterParams;
 import io.katharsis.repository.ResourceRepository;
 
 @Component
@@ -56,7 +58,7 @@ public class ProjectRepository extends AbstractRepository implements ResourceRep
     }
 
     @Override
-    public Iterable<ProjectResource> findAll(QueryParams requestParams) {
+    public Iterable<ProjectResource> findAll(QueryParams queryParams) {
         List<ProjectResource> projectResList = new LinkedList<>();
 
         try {
@@ -66,9 +68,12 @@ public class ProjectRepository extends AbstractRepository implements ResourceRep
 
             String queryTerm = null;
 
-            if (requestParams.getFilters() != null) {
-                // FIXME
-                //queryTerm = StringUtils.trim(requestParams.getFilters().get("q").asText());
+            final FilterParams projectFilterParams = queryParams.getFilters().getParams().get("project");
+            if (projectFilterParams != null) {
+                final Set<String> filterValues = projectFilterParams.getParams().get("q");
+                if (filterValues != null && !filterValues.isEmpty()) {
+                    queryTerm = StringUtils.trim(filterValues.iterator().next());
+                }
             }
 
             if (StringUtils.isNotEmpty(queryTerm)) {
@@ -77,8 +82,8 @@ public class ProjectRepository extends AbstractRepository implements ResourceRep
                 hstQuery.setFilter(filter);
             }
 
-            hstQuery.setOffset(getPaginationOffset(requestParams, 0));
-            hstQuery.setLimit(this.getPaginationLimit(requestParams, 200));
+            hstQuery.setOffset(getPaginationOffset(queryParams, 0));
+            hstQuery.setLimit(this.getPaginationLimit(queryParams, 200));
 
             final HstQueryResult result = hstQuery.execute();
 

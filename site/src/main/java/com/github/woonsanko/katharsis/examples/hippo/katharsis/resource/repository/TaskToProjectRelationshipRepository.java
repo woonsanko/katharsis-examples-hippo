@@ -16,11 +16,14 @@
  */
 package com.github.woonsanko.katharsis.examples.hippo.katharsis.resource.repository;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import org.apache.commons.collections.CollectionUtils;
 import org.springframework.stereotype.Component;
 
+import com.github.woonsanko.katharsis.examples.hippo.beans.Project;
 import com.github.woonsanko.katharsis.examples.hippo.beans.Task;
 import com.github.woonsanko.katharsis.examples.hippo.katharsis.resource.exception.ResourceNotFoundException;
 import com.github.woonsanko.katharsis.examples.hippo.katharsis.resource.model.ProjectResource;
@@ -43,18 +46,17 @@ public class TaskToProjectRelationshipRepository extends AbstractRepository
             throw new ResourceNotFoundException("Task not found by '" + sourceId + "'.");
         }
 
-        //FIXME
-//        List<Project> projectDocs = taskDoc.getReferringProjectDocuments();
-//
-//        if (CollectionUtils.isNotEmpty(projectDocs)) {
-//            projectResList = new ArrayList<>();
-//            ProjectResource projectRes;
-//
-//            for (Project projectDoc : projectDocs) {
-//                projectRes = new ProjectResource().represent(projectDoc);
-//                projectResList.add(projectRes);
-//            }
-//        }
+        List<Project> projectDocs = taskDoc.getReferringProjects();
+
+        if (CollectionUtils.isNotEmpty(projectDocs)) {
+            projectResList = new ArrayList<>();
+            ProjectResource projectRes;
+
+            for (Project projectDoc : projectDocs) {
+                projectRes = new ProjectResource().represent(projectDoc);
+                projectResList.add(projectRes);
+            }
+        }
 
         if (projectResList == null) {
             projectResList = Collections.emptyList();

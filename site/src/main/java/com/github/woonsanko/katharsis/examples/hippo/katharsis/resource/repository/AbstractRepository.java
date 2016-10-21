@@ -26,9 +26,6 @@ import org.slf4j.LoggerFactory;
 
 import io.katharsis.queryParams.QueryParams;
 import io.katharsis.queryParams.RestrictedPaginationKeys;
-import io.katharsis.queryParams.include.Inclusion;
-import io.katharsis.queryParams.params.IncludedRelationsParams;
-import io.katharsis.queryParams.params.TypedParams;
 
 /**
  * Abstract JSON API Resource Repository class,
@@ -70,24 +67,6 @@ abstract public class AbstractRepository {
         }
 
         return Math.max(1, value);
-    }
-
-    /**
-     * Returns JSON API Inclusion data as {@link Inclusion} instance after finding it by {@code path}.
-     * @param requestParams {@link RequestParams} instance
-     * @param path JSON API inclusion path
-     * @return JSON API Inclusion data as {@link Inclusion} instance after finding it by {@code path}
-     */
-    protected Inclusion getInclusionByPath(final QueryParams requestParams, final String path) {
-        Inclusion inclusion = null;
-
-        TypedParams<IncludedRelationsParams> inclusions = requestParams.getIncludedRelations();
-
-        if (inclusions != null) {
-            // TODO
-        }
-
-        return inclusion;
     }
 
     /**

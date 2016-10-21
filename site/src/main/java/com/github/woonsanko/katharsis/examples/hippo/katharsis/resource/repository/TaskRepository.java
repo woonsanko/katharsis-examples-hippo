@@ -18,7 +18,9 @@ package com.github.woonsanko.katharsis.examples.hippo.katharsis.resource.reposit
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 
+import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang.StringUtils;
 import org.hippoecm.hst.container.RequestContextProvider;
 import org.hippoecm.hst.content.beans.query.HstQuery;
@@ -31,12 +33,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
+import com.github.woonsanko.katharsis.examples.hippo.beans.Project;
 import com.github.woonsanko.katharsis.examples.hippo.beans.Task;
 import com.github.woonsanko.katharsis.examples.hippo.katharsis.resource.exception.ResourceNotFoundException;
+import com.github.woonsanko.katharsis.examples.hippo.katharsis.resource.model.ProjectResource;
 import com.github.woonsanko.katharsis.examples.hippo.katharsis.resource.model.TaskResource;
 
 import io.katharsis.queryParams.QueryParams;
-import io.katharsis.queryParams.include.Inclusion;
+import io.katharsis.queryParams.params.FilterParams;
 import io.katharsis.repository.ResourceRepository;
 
 @Component
@@ -45,7 +49,7 @@ public class TaskRepository extends AbstractRepository implements ResourceReposi
     private static Logger log = LoggerFactory.getLogger(TaskRepository.class);
 
     @Override
-    public TaskResource findOne(String id, QueryParams requestParams) {
+    public TaskResource findOne(String id, QueryParams queryParams) {
         Task taskDoc = (Task) findHippoBeanByIdentifier(id);
 
         if (taskDoc == null) {
@@ -54,9 +58,7 @@ public class TaskRepository extends AbstractRepository implements ResourceReposi
 
         TaskResource taskRes = new TaskResource().represent(taskDoc);
 
-        Inclusion inclusion = getInclusionByPath(requestParams, "projects");
-
-        if (inclusion != null) {
+        if (queryParams.getIncludedRelations().getParams().containsKey("projects")) {
             includeProjectResources(taskDoc, taskRes);
         }
 
@@ -64,7 +66,7 @@ public class TaskRepository extends AbstractRepository implements ResourceReposi
     }
 
     @Override
-    public Iterable<TaskResource> findAll(QueryParams requestParams) {
+    public Iterable<TaskResource> findAll(QueryParams queryParams) {
         List<TaskResource> taskResList = new LinkedList<>();
 
         try {
@@ -74,9 +76,12 @@ public class TaskRepository extends AbstractRepository implements ResourceReposi
 
             String queryTerm = null;
 
-            if (requestParams.getFilters() != null) {
-                //FIXME
-                //queryTerm = StringUtils.trim(requestParams.getFilters().get("q").asText());
+            final FilterParams projectFilterParams = queryParams.getFilters().getParams().get("task");
+            if (projectFilterParams != null) {
+                final Set<String> filterValues = projectFilterParams.getParams().get("q");
+                if (filterValues != null && !filterValues.isEmpty()) {
+                    queryTerm = StringUtils.trim(filterValues.iterator().next());
+                }
             }
 
             if (StringUtils.isNotEmpty(queryTerm)) {
@@ -85,8 +90,8 @@ public class TaskRepository extends AbstractRepository implements ResourceReposi
                 hstQuery.setFilter(filter);
             }
 
-            hstQuery.setOffset(getPaginationOffset(requestParams, 0));
-            hstQuery.setLimit(this.getPaginationLimit(requestParams, 200));
+            hstQuery.setOffset(getPaginationOffset(queryParams, 0));
+            hstQuery.setLimit(this.getPaginationLimit(queryParams, 200));
 
             final HstQueryResult result = hstQuery.execute();
 
@@ -122,18 +127,18 @@ public class TaskRepository extends AbstractRepository implements ResourceReposi
     }
 
     private void includeProjectResources(final Task taskDoc, final TaskResource taskRes) {
-//        final List<Project> referringProjectDocList = taskDoc.getReferringProjectDocuments();
-//
-//        if (CollectionUtils.isNotEmpty(referringProjectDocList)) {
-//            List<ProjectResource> projectResList = new LinkedList<>();
-//            ProjectResource projectRes;
-//
-//            for (Project projectDoc : referringProjectDocList) {
-//                projectRes = new ProjectResource().represent(projectDoc);
-//                projectResList.add(projectRes);
-//            }
-//
-//            taskRes.setProjects(projectResList);
-//        }
+        final List<Project> referringProjectDocList = taskDoc.getReferringProjects();
+
+        if (CollectionUtils.isNotEmpty(referringProjectDocList)) {
+            List<ProjectResource> projectResList = new LinkedList<>();
+            ProjectResource projectRes;
+
+            for (Project projectDoc : referringProjectDocList) {
+                projectRes = new ProjectResource().represent(projectDoc);
+                projectResList.add(projectRes);
+            }
+
+            taskRes.setProjects(projectResList);
+        }
     }
 }

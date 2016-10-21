@@ -1,7 +1,7 @@
 # katharsis-examples-hippo
 [JSON API](http://jsonapi.org/) implementation example project for Hippo CMS,
-using [katharsis-servlet](https://github.com/katharsis-project/katharsis-servlet)
-in [katharsis-project](https://github.com/katharsis-project).
+using [katharsis-framework](https://github.com/katharsis-project/katharsis-framework)
+of [katharsis-project](https://github.com/katharsis-project).
 
 
 # Running locally

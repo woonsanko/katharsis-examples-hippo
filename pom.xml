@@ -40,8 +40,10 @@
   <properties>
 
     <!--***START temporary override of versions*** -->
+    <jackson2.version>2.7.6</jackson2.version>
     <!-- ***END temporary override of versions*** -->
 
+    <reflections.version>0.9.9</reflections.version>
     <katharsis-servlet.version>2.7.0</katharsis-servlet.version>
 
     <essentials.version>3.0.1</essentials.version>
@@ -69,6 +71,29 @@
   <dependencyManagement>
 
     <dependencies>
+
+      <dependency>
+        <groupId>org.reflections</groupId>
+        <artifactId>reflections</artifactId>
+        <version>${reflections.version}</version>
+      </dependency>
+
+      <!-- Overriding Jackson Version -->
+      <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>${jackson2.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.jaxrs</groupId>
+        <artifactId>jackson-jaxrs-json-provider</artifactId>
+        <version>${jackson2.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.module</groupId>
+        <artifactId>jackson-module-jaxb-annotations</artifactId>
+        <version>${jackson2.version}</version>
+      </dependency>
 
       <dependency>
         <groupId>io.katharsis</groupId>
