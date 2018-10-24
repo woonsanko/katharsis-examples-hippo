@@ -40,7 +40,8 @@
   <properties>
 
     <!--***START temporary override of versions*** -->
-    <jackson2.version>2.7.6</jackson2.version>
+    <jackson2.version>2.7.9</jackson2.version>
+    <jackson2-databind.version>2.7.9.1</jackson2-databind.version>
     <!-- ***END temporary override of versions*** -->
 
     <reflections.version>0.9.9</reflections.version>
@@ -82,7 +83,7 @@
       <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-databind</artifactId>
-        <version>${jackson2.version}</version>
+        <version>${jackson2-databind.version}</version>
       </dependency>
       <dependency>
         <groupId>com.fasterxml.jackson.jaxrs</groupId>
